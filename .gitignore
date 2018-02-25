@@ -1,1 +1,4 @@
 config.py
+photos
+env
+__pycache__/
