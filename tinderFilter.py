@@ -26,25 +26,25 @@ def main():
                 # ethnicity (white || asian || hispanic || black || other)
                 ethnicity = kairos.get_ethnicity(url)
                 if ethnicity == "asian":
-                    print("ASIAN!")
+                    print("recofgnized asian")
                     urllib.request.urlretrieve(url, "./photos/asian/" + reccomendation["_id"] + ".jpg")
                     tinder.like(reccomendation["_id"])
                 if ethnicity == "white":
-                    print("Not Asian :( (white)")
+                    print("recognized white")
                     urllib.request.urlretrieve(url, "./photos/white/" + reccomendation["_id"] + ".jpg")
                 if ethnicity == "black":
-                    print("Not Asian :( (black)")
+                    print("recognized black")
                     urllib.request.urlretrieve(url, "./photos/black/" + reccomendation["_id"] + ".jpg")
                 if ethnicity == "hispanic":
-                    print("Not Asian :( (hispanic)")
+                    print("recognized hispanic")
                     urllib.request.urlretrieve(url, "./photos/hispanic/" + reccomendation["_id"] + ".jpg")
                 if ethnicity == "other":
-                    print("Not Asian :( (other)")
+                    print("recognized unique individual")
                     urllib.request.urlretrieve(url, "./photos/other/" + reccomendation["_id"] + ".jpg")
 
 
                 if ethnicity == "error":
-                    print("Could not find face")
+                    print("Could not find a face (maybe it's a meme?)")
 
 
 
